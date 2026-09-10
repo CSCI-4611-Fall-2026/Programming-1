@@ -1,0 +1,24 @@
+{
+  "name": "gophergfx-app-template",
+  "version": "1.0.0",
+  "description": "GopherGfx App Template",
+  "author": "Evan Suma Rosenberg <suma@umn.edu>",
+  "license": "CC BY-NC-SA 4.0",
+  "type": "module",
+  "devDependencies": {
+    "gophergfx": "github:illusioneering/GopherGfx",
+    "javascript-obfuscator": "^5.7.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.0",
+    "vite-plugin-glsl": "^1.6.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc --noEmit && vite build && javascript-obfuscator ./dist/index.js --output ./dist/index.js --simplify false",
+    "preview": "vite preview"
+  },
+  "allowScripts": {
+    "github:illusioneering/GopherGfx": true
+  }
+}
